@@ -1,0 +1,72 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Similarweb Scraper",
+    "description": "A simple but powerful scraper for similarweb.com. Retrieve website popularity information and get it in a JSON/XML/CSV/Excel/HTML table format. Get data such as total visits, traffic sources, competitors, top countries, company info, etc..",
+    "version": "v1"
+  },
+  "servers": [
+    {
+      "url": "https://api.apify.com/v2"
+    }
+  ],
+  "paths": {
+    "/acts/m0uka~similarweb-scraper/run-sync-get-dataset-items?clean=true&format=json": {
+      "post": {
+        "operationId": "m0uka_similarweb-scraper",
+        "x-openai-isConsequential": false,
+        "summary": "A simple but powerful scraper for similarweb.com. Retrieve website popularity information and get it in a JSON/XML/CSV/Excel/HTML table format. Get data such as total visits, traffic sources, competitors, top countries, company info, etc..",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/inputSchema"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "inputSchema": {
+        "type": "object",
+        "required": [
+          "websites",
+          "proxyConfigurationOptions"
+        ],
+        "properties": {
+          "websites": {
+            "title": "Website(s)",
+            "type": "array",
+            "description": "Similarweb websites to scrape. Enter domains or full Similarweb URLs.",
+            "items": {
+              "type": "string"
+            }
+          },
+          "maxRequestRetries": {
+            "title": "Max Request Retries",
+            "type": "integer",
+            "description": "Maximum number of retries for failed requests.",
+            "default": 10
+          },
+          "proxyConfigurationOptions": {
+            "title": "Proxy Configuration",
+            "type": "object",
+            "description": "Select proxies to be used.",
+            "default": {
+              "useApifyProxy": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

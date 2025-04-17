@@ -1,0 +1,7 @@
+.step.MuiBox-root {
+  background-color: transparent !important;
+}
+
+a[href*='https://github.com/Chainlit/chainlit'] {
+  visibility: hidden;
+}

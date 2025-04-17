@@ -1,0 +1,29 @@
+#!/usr/bin/env python3
+"""Runs the services"""
+
+import asyncio
+from dotenv import load_dotenv
+from argparse import ArgumentParser
+from main import ApplicationMain
+from chainlit.cli import run_chainlit
+
+
+def run():
+    parser = ArgumentParser(description="Runs the BOT service")
+    parser.add_argument("-e", "--env", help="Path to .env file")
+    args = parser.parse_args()
+    if args.env:
+        load_dotenv(args.env)
+    loop = asyncio.new_event_loop()
+    loop.run_until_complete(ApplicationMain.initialize())
+    try:
+        # starts chainlit
+        # run_chainlit("application.py")
+
+        # starts API
+        ApplicationMain.serve()
+    finally:
+        ApplicationMain.finalize()
+
+if __name__ == "__main__":
+    run()

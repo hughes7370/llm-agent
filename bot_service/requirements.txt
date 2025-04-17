@@ -1,0 +1,19 @@
+chainlit>=1.0.401
+python-dotenv>=1.0.0
+nltk
+tiktoken
+chromadb
+langchain>= 0.1.14
+openai>=1.14.0
+asyncify
+pandasai>=2.0.0
+beautifulsoup4
+mkdocs-material>=9.4.5
+langchain-openai>=0.1.1
+pymongo>=4.6.3
+psycopg2-binary>=2.9.9
+sqlalchemy>=2.0.29
+pydantic
+fastapi>=0.110.2
+apify_client>=1.6.4
+anthropic>=0.25.6

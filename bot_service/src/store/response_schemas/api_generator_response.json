@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "API response format for endpoints",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "url": {
+                "type": "string",
+                "description": "The URL endpoint"
+            },
+            "method": {
+                "type": "string",
+                "description": "The HTTP method used for the API endpoint (e.g., GET, POST, PUT, DELETE)",
+                "enum": ["GET", "POST"]
+            },
+            "data": {
+                "type": "object",
+                "description": "The data to be sent with the request or expected in the response",
+                "additionalProperties": true
+            }
+        },
+        "required": ["url", "method"]
+    },
+    "minItems": 1
+}

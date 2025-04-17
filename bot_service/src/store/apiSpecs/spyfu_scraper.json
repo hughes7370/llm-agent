@@ -1,0 +1,95 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+      "title": "Spyfu",
+      "description": "Get the most valuable and successful keywords, top ads, domain statistics and top competitors from Spyfu public data. It's fast and costs little.",
+      "version": "v1"
+    },
+    "servers": [
+      {
+        "url": "https://api.apify.com/v2"
+      }
+    ],
+    "paths": {
+      "/acts/canadesk~spyfu/run-sync-get-dataset-items?clean=true&format=json": {
+        "post": {
+          "operationId": "canadesk_spyfu",
+          "x-openai-isConsequential": false,
+          "summary": "Get the most valuable and successful keywords, top ads, domain statistics and top competitors from Spyfu public data. It's fast and costs little.",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/inputSchema"
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "OK"
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "inputSchema": {
+          "type": "object",
+          "required": [
+            "url",
+            "process"
+          ],
+          "properties": {
+            "url": {
+              "title": "URL of the page",
+              "type": "string",
+              "description": "The URL of website you want to get the data from."
+            },
+            "country": {
+              "title": "Default country",
+              "enum": [
+                "US",
+                "CA",
+                "AU",
+                "BR",
+                "DE",
+                "ES",
+                "FR",
+                "GB",
+                "IN",
+                "IT",
+                "MX",
+                "NL",
+                "SG"
+              ],
+              "type": "string",
+              "description": "Default country to look for.",
+              "default": "US"
+            },
+            "process": {
+              "title": "Process",
+              "enum": [
+                "tc",
+                "ds",
+                "ta",
+                "mv",
+                "ms",
+                "nr"
+              ],
+              "type": "string",
+              "description": "Select the process to run.",
+              "default": "tc"
+            },
+            "proxy": {
+              "title": "Proxy configuration",
+              "type": "object",
+              "description": "Select proxies to be used by your crawler."
+            }
+          }
+        }
+      }
+    }
+  }

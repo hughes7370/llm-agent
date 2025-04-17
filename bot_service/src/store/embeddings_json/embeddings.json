@@ -1,0 +1,22 @@
+[
+    {
+        "name": "OpenAPISpecs",
+        "location": "./store/apiSpecs/googleTrends_scraper.json",
+        "file_type": "json"
+    },
+    {
+        "name": "knowledgebase",
+        "location": "./store/knowledgebase/glossary_definitions.csv",
+        "file_type": "csv"
+    },
+    {
+        "name": "OpenAPISpecs",
+        "location": "./store/apiSpecs/m0uka_similarweb-scraper_api_spec_json.json",
+        "file_type": "json"
+    },
+    {
+        "name": "OpenAPISpecs",
+        "location": "./store/apiSpecs/spyfu_scraper.json",
+        "file_type": "json"
+    }
+]

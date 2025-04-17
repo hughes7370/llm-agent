@@ -1,0 +1,42 @@
+AZURE_API_KEY=""
+AZURE_API_TYPE=""
+AZURE_API_BASE=""
+AZURE_API_VERSION=""
+AZURE_DEPLOYMENT_NAME=""
+AZURE_EMBEDDING_DEPLOYMENT_NAME=""
+AZURE_MODEL_NAME=""
+
+OPENAI_API_KEY=""
+OPENAI_MODEL_NAME=""   
+
+DATABSE_DIRECTORY="/vectorStore"
+
+BASE_URL=""
+TOKEN_URL=""
+OAUTH_JSON_FILE=""
+
+#Embedding files
+OPENAPI_SPEC_DIR="./store/apiSpecs"
+EMBEDDINGS_JSON_FILE="./store/embeddings_json/embeddings.json"
+
+MAX_RETRIES=3
+
+# Tranformation filter keys files
+FILTER_KEYS_DIR="./store/transformation_filters"
+
+# LLM prompt response pairs csv directory
+LLM_LOGS_DIR="./llm_pr_pairs"
+
+# LLM prompt response pairs file
+LLM_PR_QUERIES_PATH="./store/llm_pr_queries.json"
+
+# Random secret, can be obtained using `python3 -m chainlit create-secret`
+CHAINLIT_AUTH_SECRET=""
+
+# Json file containting user credentialson"
+
+POSTGRES_HOST="localhost"
+POSTGRES_PORT=5432
+POSTGRES_USERNAME="root"
+POSTGRES_PASSWORD="root"
+POSTGRES_DB="LOCAL"

@@ -1,0 +1,18 @@
+{
+    "queries": [
+        "Give me baggage status for flight EK0761",
+        "Give me a breakup of bags for flight EK0761 on 4th April",
+        "Give me a list of Emirates flights today",
+        "Give me a summary of flight 0761",
+        "How many are transfer bags for flight number 0761?",
+        "Give me a list of the transfer bags for flight 0761",
+        "What is the average delay for TK 0761 last month?",
+        "What is the percentage/ratio of checked-in vs sorted/loaded bags today/yesterday at DXB?",
+        "What is the first bag last bag performance for flight EK0761?",
+        "Which flights with departure in the next 15 minutes have remaining bags to be loaded?",
+        "What is the worst connection time between two flights within the last 60 minutes?",
+        "Group the bagtags by location and flight for yesterday",
+        "How many first class bags for flight EK0761? Status of these bags?",
+        "What is the average bag count per flight EK0761?"
+    ]
+}
